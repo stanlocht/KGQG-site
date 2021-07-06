@@ -1,0 +1,76 @@
+@font-face {
+    font-family: 'GraphikRegular';
+    src: url('../fonts/graphikregular.eot');
+    src: url('../fonts/graphikregular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/graphikregular.woff2') format('woff2'),
+        url('../fonts/graphikregular.woff') format('woff'),
+        url('../fonts/graphikregular.ttf') format('truetype'),
+        url('../fonts/graphikregular.svg#PxGrotesk-Bold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+    /* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+@font-face {
+    font-family: 'GraphikBold';
+    src: url('../fonts/graphikbold.eot');
+    src: url('../fonts/graphikbold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/graphikbold.woff2') format('woff2'),
+        url('../fonts/graphikbold.woff') format('woff'),
+        url('../fonts/graphikbold.ttf') format('truetype'),
+        url('../fonts/graphikbold.svg#PxGrotesk-Bold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+    /* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+@font-face {
+    font-family: 'PxGroteskBold';
+    src: url('../fonts/PxGrotesk-Bold.eot');
+    src: url('../fonts/PxGrotesk-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/PxGrotesk-Bold.woff2') format('woff2'),
+        url('../fonts/PxGrotesk-Bold.woff') format('woff'),
+        url('../fonts/PxGrotesk-Bold.ttf') format('truetype'),
+        url('../fonts/PxGrotesk-Bold.svg#PxGrotesk-Bold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+    /* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+@font-face {
+    font-family: 'PxGroteskRegular';
+    src: url('../fonts/PxGroteskRegular.eot');
+    src: url('../fonts/PxGroteskRegular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/PxGroteskRegular.woff2') format('woff2'),
+        url('../fonts/PxGroteskRegular.woff') format('woff'),
+        url('../fonts/PxGroteskRegular.ttf') format('truetype'),
+        url('../fonts/PxGroteskRegular.svg#PxGrotesk-Bold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+    /* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+@font-face {
+    font-family: 'PxGroteskScreen';
+    src: url('../fonts/PxGrotesk-Screen.eot');
+    src: url('../fonts/PxGrotesk-Screen.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/PxGrotesk-Screen.woff2') format('woff2'),
+        url('../fonts/PxGrotesk-Screen.woff') format('woff'),
+        url('../fonts/PxGrotesk-Screen.ttf') format('truetype'),
+        url('../fonts/PxGrotesk-Screen.svg#PxGrotesk-Screen') format('svg');
+    font-weight: 900;
+    font-style: normal;
+}
+
