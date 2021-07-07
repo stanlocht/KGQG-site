@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Automated Privacy-Preserving Video Processing through Anonymized 3D Scene Reconstruction</title>
+		<title>KGQG with PLMs</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -73,16 +73,17 @@
 							<a class="image"><img src="images/questions.png" alt="" data-position="top center" /></a>
 							<div class="content">
 								<div class="inner">
-									<h2>Why generate questions from knowledge graphs?</h2>
+									<h2>So, we need training data!</h2>
 									<p>As a result, a general consensus has been reached: a trade-off between security and privacy is needed.
 									In Europe, the GDPR (or General Data Protection Regulation) has been approved, with the goal of
 									protecting citizens’ right to privacy. These regulations forbid private entities and institutions
 									to store these kinds of video recordings in the long term, unless it can be guaranteed
 									that the videos have been completely anonymized.</p>
+									<h3>How can we automatically generate questions to create training data?</h3>
 								</div>
 							</div>
 						</section>
-						<section>
+						<!-- <section>
 							<a class="image"><img src="images/paaspop.jpg" alt="" data-position="25% 25%" /></a>
 							<div class="content">
 								<div class="inner">
@@ -96,9 +97,9 @@
 									<!-- <ul class="actions">
 										<li><a href="generic.html" class="button">Learn more</a></li>
 									</ul> -->
-								</div>
+								<!-- </div>
 							</div>
-						</section>
+						</section> -->
 					</section>
 
 				<!-- Literature review -->
@@ -112,7 +113,7 @@
 							<a class="image"><img src="images/personal_identifiers2.jpg" alt="" data-position="center center" /></a>
 							<div class="content">
 								<div class="inner">
-									<h3>What kind of personal data can we find in a video?</h3>
+									<h3>How can we information from graphs in natural language?</h3>
 									<p>The GDPR defines personal data as any kind of information that can lead to the identification of an individual,
 										on its own or in combination with other data. There are several personal identifiers that could be found in a video or
 										image, which are <a href="https://www.sciencedirect.com/science/article/abs/pii/S0923596516300856"  target="_blank">typically
@@ -126,7 +127,7 @@
 							<a class="image"><img src="images/objdetection2.png" alt="" data-position="top center" /></a>
 							<div class="content">
 								<div class="inner">
-									<h3>How can we detect the areas displaying personal data?</h3>
+									<h3>How can we pose questions from graphs?</h3>
 									<p>Considering the kind of scenario that can be found in the surroundings of the Paaspop festival, or in a general outdoors street scene,
 										6 different classes of objects were defined as potentially sensitive:
 									people, and several vehicles that could be linked to their drivers' or riders' identities
@@ -141,7 +142,7 @@
 								</div>
 							</div>
 						</section>
-						<section>
+						<!-- <section>
 							<a class="image"><img src="images/privacy_techniques.jpg" alt="" data-position="25% 25%" /></a>
 							<div class="content">
 								<div class="inner">
@@ -159,12 +160,10 @@
 									<p>All these techniques have, in fact, something in common: they all manipulate the original video in some way. The problem of this approach is that,
 									if the intention is to automate the anonymization process, the detection of sensitive areas would have to be perfect. If the detection and
 									subsequent image processing failed for even just a single video frame, the privacy of the recorded individuals would be compromised.</p>
-									<!-- <ul class="actions">
-										<li><a href="generic.html" class="button">Learn more</a></li>
-									</ul> -->
+
 								</div>
 							</div>
-						</section>
+						</section> -->
 					</section>
 
 				</section>
