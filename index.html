@@ -5,496 +5,300 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
-	<head>
-		<title>KGQG with PLMs</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+    <head>
+        <title>KGQG with PLMs</title>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+        <link rel="stylesheet" href="assets/css/main.css"/>
+        <noscript><link rel="stylesheet" href="assets/css/noscript.css"/></noscript>
+    </head>
+    <body
+        class="is-preload">
 
-		<!-- Sidebar -->
-			<section id="sidebar">
-				<div class="inner">
-					<nav>
-						<ul>
-							<li><a href="#intro">Title page</a></li>
-							<li><a href="#one">Introduction</a></li>
-							<li><a href="#review">Previous research</a></li>
-							<li><a href="#method">Method</a></li>
-							<li><a href="#two">Results</a></li>
-							<li><a href="#three">Future work</a></li>
-							<li><a href="#four">In the media</a></li>
-						</ul>
-					</nav>
-				</div>
-			</section>
+        <!-- Sidebar -->
+        <section id="sidebar">
+            <div class="inner">
+                <nav>
+                    <ul>
+                        <li><a href="#intro">Title page</a></li>
+                        <li><a href="#one">Introduction</a></li>
+                        <li><a href="#review">Previous research</a></li>
+                        <li><a href="#method">Method</a></li>
+                        <li><a href="#two">Results</a></li>
+                        <li><a href="#three">Future work</a></li>
+                        <!-- <li><a href="#four">In the media</a></li> -->
+                    </ul>
+                </nav>
+            </div>
+        </section>
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+        <!-- Wrapper -->
+        <div
+            id="wrapper">
 
-				<!-- Home -->
-					<section id="intro" class="wrapper style1 fullscreen fade-up">
-						<div class="ornement-header"></div>
-						<div class="inner">
-							<h1>Transf<strong>e</strong>r Le<strong>a</strong>rning for Qu<strong>e</strong>stion
-								Gener<strong>a</strong>tion from Knowl<strong>e</strong>dge
-								Graphs</h1>
-							<p>A thesis project by Stan Lochtenberg <br><br>
-							Supervisor: Frank Nack<br>
-							External supervisor: Bas Niesink<br>
+            <!-- Home -->
+            <section id="intro" class="wrapper style1 fullscreen fade-up">
+                <div class="ornement-header"></div>
+                <div class="inner">
+                    <h1>Transf<strong>e</strong>r Le<strong>a</strong>rning for Qu<strong>e</strong>stion
+                        								Gener<strong>a</strong>tion from Knowl<strong>e</strong>dge
+                        								Graphs</h1>
+                    <p>A thesis project by Stan Lochtenberg
+                        <br><br>
+                        Supervisor: Frank Nack<br>
+                        External supervisor: Bas Niesink<br>
+                    </p>
+                    <small>
+                        <i>Thesis project submitted in fulfillment of the requirements for the degree of:<br>
+                            MSc Artificial Intelligence programme</i><br></small>
+                    <a class="image"><img src="images/logos/uvalogo.png" height="110" style="padding-top: 20px" alt=""/></a><br>
+                    <!-- <ul class="actions">
+                    								<li><a href="#one" class="button scrolly">Learn more</a></li>
+                    							</ul> -->
+                </div>
+            </section>
+
+            <!-- Intro -->
+            <section id="one" class="wrapper style2 spotlights">
+                <section>
+                    <a class="image"><img src="images/knowledge-graph.jpg" alt="" data-position="center center"/></a>
+                    <div class="content">
+                        <div class="inner">
+                            <h2>What are knowledge graphs?</h2>
+                            <p>Knowledge Graphs (KGs) are useful tools to describe and store knowledge in the form of relations between entities.
+								 In a practical setting KGs have many use-cases. One example is KG-based question answering, where a KG is used to 
+								 automatically look up information to answer user questions. To train a system like that, you need a lot of training data, in the form of questions about the particular KG, so the KG answering system can 'practice' answering these questions.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <a class="image"><img src="images/questions.png" alt="" data-position="top center"/></a>
+                    <div class="content">
+                        <div class="inner">
+                            <h2>So, we need training data!</h2>
+                            <p>
+								To write these questions manually requires a lot of time and effort. 
+								Therefore, it would be of great use if we can automate this process. Our research question is the following:
 							</p>
-							<small><i>Thesis project submitted in fulfillment of the requirements for the degree of:<br>
-							MSc Artificial Intelligence programme</i><br></small>
-							<a class="image"><img src="images/logos/uvalogo.png" height="110" style="padding-top: 20px" alt=""/></a><br>
-							<!-- <ul class="actions">
-								<li><a href="#one" class="button scrolly">Learn more</a></li>
-							</ul> -->
-						</div>
-					</section>
+                            <h3>How can we automatically generate questions to create training data?</h3>
+                        </div>
+                    </div>
+                </section>
+                <!-- <section>
+                							<a class="image"><img src="images/paaspop.jpg" alt="" data-position="25% 25%" /></a>
+                							<div class="content">
+                								<div class="inner">
+                									<p>An example of this type of institution is Paaspop, a music festival taking place in the Netherlands.
+                										Its organizers would like to store their surveillance recordings from the surroundings of the festival,
+                										to be able to analyze them in the long term with the goal of improving their logistics, in aspects like
+                										crowd control or access control to the festival area. However, GDPR prevents them from doing so without
+                										ensuring anonymity within the video recordings. This poses the following question:</p>
+                										<h3>Is there a way to fully remove all personal data from a video, while preserving the intelligibility of the scene?
+                										How could that be done?</h3> -->
+            <!-- <ul class="actions">
+            										<li><a href="generic.html" class="button">Learn more</a></li>
+            									</ul> -->
+                <!-- </div>
+                							</div>
+                						</section> -->
+            </section>
 
-				<!-- Intro -->
-					<section id="one" class="wrapper style2 spotlights">
-						<section>
-							<a class="image"><img src="images/knowledge-graph.jpg" alt="" data-position="center center" /></a>
-							<div class="content">
-								<div class="inner">
-									<h2>What are knowledge graphs?</h2>
-									<p>During these last years, the presence of video cameras in public spaces has widely increased,
-										due to the cost reduction and quality increase of technologies such as CCTV and surveillance systems.
-										Their ubiquity has raised a common concern about privacy, and about how individuals could keep
-										control over their own personal information in these scenarios.
-									</p>
-								</div>
-							</div>
-						</section>
-						<section>
-							<a class="image"><img src="images/questions.png" alt="" data-position="top center" /></a>
-							<div class="content">
-								<div class="inner">
-									<h2>So, we need training data!</h2>
-									<p>As a result, a general consensus has been reached: a trade-off between security and privacy is needed.
-									In Europe, the GDPR (or General Data Protection Regulation) has been approved, with the goal of
-									protecting citizens’ right to privacy. These regulations forbid private entities and institutions
-									to store these kinds of video recordings in the long term, unless it can be guaranteed
-									that the videos have been completely anonymized.</p>
-									<h3>How can we automatically generate questions to create training data?</h3>
-								</div>
-							</div>
-						</section>
-						<!-- <section>
-							<a class="image"><img src="images/paaspop.jpg" alt="" data-position="25% 25%" /></a>
-							<div class="content">
-								<div class="inner">
-									<p>An example of this type of institution is Paaspop, a music festival taking place in the Netherlands.
-										Its organizers would like to store their surveillance recordings from the surroundings of the festival,
-										to be able to analyze them in the long term with the goal of improving their logistics, in aspects like
-										crowd control or access control to the festival area. However, GDPR prevents them from doing so without
-										ensuring anonymity within the video recordings. This poses the following question:</p>
-										<h3>Is there a way to fully remove all personal data from a video, while preserving the intelligibility of the scene?
-										How could that be done?</h3>
-									<!-- <ul class="actions">
-										<li><a href="generic.html" class="button">Learn more</a></li>
-									</ul> -->
-								<!-- </div>
-							</div>
-						</section> -->
-					</section>
-
-				<!-- Literature review -->
-				<section id="review" class="wrapper style3 fade-up">
-					<div class="inner">
-						<h2>Previous research</h2>
-						<p>To be able to answer the question above, we first had to ask ourselves the following:</p>
-					</div>
-					<section id="one" class="wrapper style2 spotlights">
-						<section>
-							<a class="image"><img src="images/personal_identifiers2.jpg" alt="" data-position="center center" /></a>
-							<div class="content">
-								<div class="inner">
-									<h3>How can we information from graphs in natural language?</h3>
-									<p>The GDPR defines personal data as any kind of information that can lead to the identification of an individual,
-										on its own or in combination with other data. There are several personal identifiers that could be found in a video or
-										image, which are <a href="https://www.sciencedirect.com/science/article/abs/pii/S0923596516300856"  target="_blank">typically
-											classified among three types</a>: biometric (faces, gait), soft biometric (body silhouette,
-										approximate age, gender, height, weight), and non-biometric (clothing, hairstyle, license plates, vehicle models).
-									</p>
-								</div>
-							</div>
-						</section>
-						<section>
-							<a class="image"><img src="images/objdetection2.png" alt="" data-position="top center" /></a>
-							<div class="content">
-								<div class="inner">
-									<h3>How can we pose questions from graphs?</h3>
-									<p>Considering the kind of scenario that can be found in the surroundings of the Paaspop festival, or in a general outdoors street scene,
-										6 different classes of objects were defined as potentially sensitive:
-									people, and several vehicles that could be linked to their drivers' or riders' identities
-									 (cars, bicycles, motorcycles, trucks and buses).</p>
-									<p>To automatically find them and locate them, an object detection algorithm is needed. Three well-known state-of-the-art detectors
-									are <a href="https://ieeexplore.ieee.org/abstract/document/8372616" target="_blank">Mask R-CNN</a>
-									(which proposes several regions in an image that could potentially contain objects, to later classify them and segment them),
-									<a href="https://arxiv.org/abs/1804.02767" target="_blank">YOLOv3</a> and <a href="https://ieeexplore.ieee.org/abstract/document/8417976" target="_blank">RetinaNet</a>
-									(both of which perform both region division and classification together). YOLOv3 enables real-time application, but Mask R-CNN offers a higher accuracy.
-									RetinaNet was created with the purpose of combining real-time execution with a higher accuracy. Although RetinaNet outperforms both YOLOv3 and Mask R-CNN in
-									identical conditions, Mask R-CNN is the only method that performs object segmentation.</p>
-								</div>
-							</div>
-						</section>
-						<!-- <section>
-							<a class="image"><img src="images/privacy_techniques.jpg" alt="" data-position="25% 25%" /></a>
-							<div class="content">
-								<div class="inner">
-									<h3>How can we remove or process personal data in a video?</h3>
-									<p>There are several existing methods for processing sensitive areas in images and videos. The most typical approach is to apply image filters, such as
-									<a href="https://ieeexplore.ieee.org/document/7026221/" target="_blank">blurring (a), pixelating (b), warping (c)</a>, <a
-									href="https://doi.org/10.1007/978-1-84882-301-3_8" target="_blank">morphing (d)</a>
-									 or <a href="https://ieeexplore.ieee.org/document/6343472" target="_blank">masking (e)</a>, for processing specific regions
-									 like human faces or license plates.
-									As these are not the only areas displaying personal data, image filters could be applied to larger areas, such as the whole human body.
-									We as humans, however, are capable of recognizing individuals even through these filters.</p>
-									<p>Other approaches also involve some disadvantages for our specific use case. <a href="https://doi.org/10.1117/12.587986" target="_blank">Object removal (f)</a> would prevent us from preserving relevant information;
-									and the <a href="https://doi.org/10.1109/CVPRW.2006.184" target="_blank">encryption of image regions (g)</a>, by means of pixels scrambling, can be reversed by using the corresponding key,
-									meaning that GDPR would still apply.</p>
-									<p>All these techniques have, in fact, something in common: they all manipulate the original video in some way. The problem of this approach is that,
-									if the intention is to automate the anonymization process, the detection of sensitive areas would have to be perfect. If the detection and
-									subsequent image processing failed for even just a single video frame, the privacy of the recorded individuals would be compromised.</p>
-
-								</div>
-							</div>
-						</section> -->
-					</section>
-
-				</section>
-
-
-				<!-- Two -->
-					<section id="method" class="wrapper style3 fade-up">
-						<div class="inner">
-							<h2>Proposed method</h2>
-							<p>Instead of following the general approach of manipulating the original video frame images,
-								our proposed method aims at <b>estimating the locations of the relevant
-								 objects (people and vehicles) within the scene in the 3D space, at each frame</b>.
-							 These estimated locations can be used, for instance, to recreate the scene in a 3D animation,
-						 where all the objects of the same type are represented using an identical default 3D model.</p>
-						 <p>This approach follows the trend set by a few existing privacy-preserving techniques,
-							  focused on using alternative information sources instead of the original video feed.
-							 Some examples are the <a href="https://doi.org/10.1007/978-3-642-31522-0_95" target="_blank">usage of RGBD (Red-Color-Green-Depth)
-								 cameras and the removal of the RGB color components</a>,
-							 or the <a href="https://ieeexplore.ieee.org/document/4653063/" target="_blank">usage of positional metadata based on GPS sensor measurements</a>.
-						 The usage of 3D avatars for anonymization has been proposed before <a href="https://doi.org/10.1016/j.eswa.2015.01.041" target="_blank">as
-							  a theoretical solution</a>, but has not been
-					 implemented yet prior to this project.</p>
-							<p>This way, only the position and motion information is preserved, guaranteeing the anonymity of
-								the recreated scene while also providing sufficient information of the original scene for further analysis.</p>
-								<!-- <div class="box alt">
-									<div class="row gtr-uniform">
-										<div class="col-12"><span class="image fit"><img src="images/pipeline_full_white.png" alt="" /></span></div>
-									</div>
-								</div> -->
-								<div class="box alt">
-									<div class="row gtr-uniform">
-										<div class="col-12"><span class="image fit"><img src="images/output_example1.png" alt="High-level functioning of the method" /></span></div>
-									</div>
-								</div>
-							<p>To achieve this, we make use of the following techniques and tools:</p>
-							<div class="features">
-								<section>
-									<span class="icon solid major fa-object-ungroup"></span>
-									<h3>Object detection: Mask R-CNN</h3>
-									<p>... to find and locate all the objects of interest to us: people, and certain vehicles
-										(cars, motorcycles, bicycles, buses and trucks).
-										<a href="https://ieeexplore.ieee.org/abstract/document/8372616" target="_blank">Mask R-CNN</a>
-										 proposes regions in an image with a high chance of containing a certain object. Once it is confident that
-										 there is an object in a certain region, it classifies it and adjusts the region contour for a more precise
-										 localization of the object. It also performs
-										 object segmentation, indicating which pixels actually belong to each object.</p>
-								</section>
-								<section>
-									<span class="icon solid major fa-wave-square"></span>
-									<h3>Object tracking: DeepSORT</h3>
-									<p>... to identify all the objects throughout the video sequence, by associating the
-									detected objects to themselves in subsequent frames. <a href="https://arxiv.org/pdf/1703.07402.pdf" target="_blank">DeepSORT</a> is able to perform this association
-								based on both motion assumptions (such as expected positions or speed) and on appearance similarity. Object tracking helps
-							filter out potentially false positive detections (e.g. if an object was not found in any other frame) and smooth object trajectories:
-							for instance, if an object is fully occluded at some point, its missing 3D location could be interpolated based
-						on its previous and future estimated locations.</p>
-								</section>
-								<section>
-									<span class="icon solid major fa-cube"></span>
-									<h3>Depth estimation: MonoDepth</h3>
-									<p>... to infer the distance to the camera of every 2D image point or pixel, within each video frame.
-										<a href="http://openaccess.thecvf.com/content_cvpr_2017/papers/Godard_Unsupervised_Monocular_Depth_CVPR_2017_paper.pdf" target="_blank">MonoDepth</a>
-									does this by predicting how the paired image to the input image would look like in a stereo camera setup (that is, a 3D camera).
-									From these images, it outputs a disparity map, which indicates the displacement of each 2D point relative to itself
-								in the other image. If we know certain camera parameters, we can compute depth from the disparity map by using geometry
-								and the concept of triangle similarity.</p>
-								</section>
-								<section>
-									<span class="icon solid major fa-video"></span>
-									<h3>Camera self-calibration: estimation of vanishing points</h3>
-									<p>... to estimate the camera parameters we need to convert 2D images to 3D, directly from the recorded video sequence.
-									As our goal is to make the method transparent to the user's input, we do not know -or have access to- the camera that was used to record
-								the video. Based on a modified version of <a href="https://doi.org/10.1109/ICPR.2016.7899644" target="_blank">this method</a>, we compute the
-							camera parameters from vanishing points (image points where parallel lines in the real world intersect). We find candidate vanishing points by locating the head and feet of
-						a certain tracked person (whose height is assumed to be constant) and intersecting head-to-head, feet-to-feet and head-to-feet lines.</p>
-								</section>
-								<section>
-									<span class="icon solid major fa-ruler-combined"></span>
-									<h3>3D reconstruction: epipolar geometry</h3>
-									<p>... to calculate the 3D world coordinates of every 2D image point, once the depth components and the camera
-										parameters have been estimated. Epipolar geometry models the geometry of stereo cameras, and establishes the relationships
-									and constraints among 3D points and their projections on a 2D image. Similarly to how depth was computed based on the disparity maps,
-								<a href="https://dl.acm.org/citation.cfm?id=2523356" target="_blank">the remaining coordinates can be calculated</a>. For each object, we select a group of points from its center area, and average
-							their 3D coordinates to obtain an estimate of the objects' locations on the ground plane.</p>
-								</section>
-								<section>
-									<span class="icon solid major fa-walking"></span>
-									<h3>3D animation: Unity</h3>
-									<p>... to generate an alternative version of the video, by means of a 3D animation where objects are represented
-									with default 3D models depending on their object class. As a proof-of-concept, we integrated our final output (objects'
-									locations on the ground plane) in a 3D environment created with the <a href="https://unity.com/" target="_blank">Unity game engine</a>.</p>
-								</section>
-							</div>
-							<!-- <ul class="actions">
-								<li><a href="generic.html" class="button">Learn more</a></li>
-							</ul> -->
-						</div>
-					</section>
-
-					<!-- Results -->
-					<section id="two" class="wrapper style3 fade-up">
-						<div class="inner">
-							<h2>Results</h2>
-							<p><span class="image right"><iframe src="https://www.youtube.com/embed/l9MYQnQlQok?rel=0" width="90%" frameborder="0" allow="accelerometer;
-							 autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></span>For
-							 demonstration and evaluation purposes, we make use of this video sequence named <i>TUD-Stadtmitte</i>. It was
-							 taken from the <a href="https://arxiv.org/abs/1504.01942" target="_blank"><i>MOT Challenge</i></a>
- 								tracking benchmark. It contains ground truth annotations of the 3D locations of the objects
- 								throughout the video, which were captured thanks to a multiple-camera setup.<br></p>
-
-								<h3>Object detection</h3>
-								<p><span class="image left"><img src="images/results/demo_detection.png" alt="" /></span><br>
-									Mask R-CNN displays a highly accurate detection of the people in <i>TUD-Stadtmitte</i>,
-								with high levels of confidence, and a reliable detection and segmentation even with severe occlusions.<br><br>
-							Mask R-CNN gives a mean average precision of 20.1%
-							when evaluated on the <a href="https://doi.org/10.1109/CVPR.2016.350" target="_blank" alt="Object detection results"><i>Cityscapes</i></a> dataset,
-						considering our 6 selected object classes only. Although this value is significantly lower than its theoretical mean
-					average precision, Mask R-CNN still provides a state-of-the-art performance, specifically for our objects of interest and in a
-					setting similar to our expected ones (outdoors street scene, displaying people and vehicles), such as the ones
-				shown in <i>Cityscapes</i>.</p>
-
-				<h3>Object tracking</h3>
-				<p><span class="image right"><iframe src="https://www.youtube.com/embed/v98vbZZJZDs?rel=0" width="90%" frameborder="0" allow="accelerometer; autoplay;
-					encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></span>DeepSORT provides a fairly robust tracking
-					of the detected objects, and a relatively consistent assignment of the object IDs, with a low number of identity switches.
-				Even when objects are fully occluded and disappear from the frame, they are mostly correctly identified afterwards.<br><br>
-				When evaluating the final output of the system, the usage of tracking increased the overall accuracy by 15% on the test
-				setting as opposed to when tracking was not used. </p>
-
-				<h3>Depth estimation</h3>
-				<p><span class="image left"><img src="images/results/demo_depth.png" alt="" /></span>MonoDepth was trained on
-					several datasets and combinations of them, with data mainly obtained from <i>Cityscapes</i>. We evaluated it on the
-					<a href="https://ieeexplore.ieee.org/abstract/document/6248074" target="_blank"><i>KITTI</i></a> dataset, similar to <i>Cityscapes</i> in terms of viewpoint and scene content. We obtained relatively
-					low error rates, with a root-mean-square error of 4.58.<br><br>
-					However, when we analyzed its performance on videos that visibly differed from the training data
-					(particularly in viewpoint and camera height),
-					the depth maps presented several artifacts, added to the lack of temporal consistency of the method.
-					Both the objects and the background showed
-					incongruities in their depth maps. Particularly, the areas belonging to objects labeled
-					as <i>person</i> yielded larger errors, with a root-mean-square error that doubled its value compared to
-					when the areas belonging to all relevant objects were considered</p>
-
-					<!-- self-calibration -->
-					<h3>Camera self-calibration</h3>
-					<p><span class="image right"><iframe src="https://www.youtube.com/embed/_4luTQAYqoE" width="90%" frameborder="0" allow="accelerometer;
-					autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></span>Despite the simplifications
-					done to the original method in aspects like optimization, we were also able to include certain improvements, such as
-					the direct usage of the detected objects and their segmentation masks obtained with Mask R-CNN. These masks provided us
-					with more accurate locations of the head and feet of the reference person, ultimately obtaining more reliable candidate
-					vanishing points.<br><br>
-					Due to the actual nature of the method, nevertheless, the results were highly influenced by the adequacy of the selected
-					reference person. If this person moved around the scene along the 3 axes, the candidate vanishing points provided a better
-					overview of the 3D space, yielding more perceptually accurate horizon lines.</p>
-
-					<div class="box alt">
-						<div class="row gtr-uniform">
-							<div class="col-12"><span class="image fit"><img src="images/results/demo_calib.png" width="80%" alt="" /></span></div>
-						</div>
-					</div>
-
-					<!-- 3D reconstruction (results final output) -->
-					<h3>3D reconstruction</h3>
-					<p>Finally, we obtained the estimated locations
-						of the objects over the ground plane, by applying epipolar geometry using the depth maps of each of the video frames,
-						and the camera parameters obtained through the self-calibration process. We visualize them on a 2D plot that represents
-						the ground plane. Each point in the plot corresponds to an object, and the legend indicates the object class corresponding
-						to each of these estimated objects, based on a color code.
-					</p>
-					<div class="box alt">
-						<div class="row gtr-uniform">
-							<div class="col-12"><span class="image fit"><div style="position:relative;padding-top:56.25%;"><iframe
-								src="https://www.youtube.com/embed/4FEH5CsCkRw?rel=0" style="position:absolute;top:0;left:0;width:90%;height:90%;"
-								 frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></span></div>
-						</div>
-					</div>
-					<p>
-						While the presence of the objects and the directionality of their movement is preserved, it is noticeable how the
-						large outliers in the estimated depth component (y-axis) affects the final output, causing a drastic flickering along
-						this axis. This flickering is even stronger when the objects reach the sides of the image, to either enter or leave the frame.
-					</p>
-					<p>
-						This situation is also captured when making use of multi-object tracking metrics. An accuracy of 60% is obtained but
-						at the cost of a distance precision of 1.6 meters over the ground plane. When only the x-axis is taken into account,
-						without considering the depth component, this accuracy raises until 70% with a much better precision of 0.45 meters.
-					</p>
-
-
-					<!-- Unity PoC -->
-					<h3>3D animation</h3>
-					<p>
-						Once we have estimated the locations of the objects on the ground plane, we can generate the trajectories to animate
-						default 3D models within a 3D environment, in a 3D graphics engine or a game engine.
-					</p>
-					<p>
-						As a proof-of-concept, we make use of our estimated object locations for the <i>TUD-Stadtmitte</i> sequence
-						to animate 3D <i>person</i> models in a basic environment in Unity:
-					</p>
-					<div class="box alt">
-						<div class="row gtr-uniform">
-							<div class="col-12"><span class="image fit"><div style="position:relative;padding-top:56.25%;"><iframe
-								src="https://www.youtube.com/embed/QIP1FNZ3G7o" style="position:absolute;top:0;left:0;width:90%;height:90%;"
-								frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-								allowfullscreen></iframe></div></span></div>
-						</div>
-					</div>
-						</div>
-					</section>
-
-				<!-- Three -->
-					<section id="three" class="wrapper style1 fade-up">
-						<div class="inner">
-							<h2>Future work</h2>
-							<p>Currently, the main limitation of the method is the low accuracy and reliability of the depth estimation process.
+            <!-- Literature review -->
+            <section id="review" class="wrapper style3 fade-up">
+                <div class="inner">
+                    <h2>Previous research</h2>
+                    <p>To be able to answer the question above, we first had to ask ourselves the following:</p>
+                </div>
+                <section id="one" class="wrapper style2 spotlights">
+                    <section>
+                        <a class="image"><img src="images/transformer.png" alt="" data-position="center center"/></a>
+                        <div class="content">
+                            <div class="inner">
+                                <h3>How can we information from graphs in natural language?</h3>
+                                <p>
+									Much research has been conducted on extracting information from knowledge graphs. It often involves complicated 
+									deep neural networks that are designed to handle the structure of graphs. <a href="https://arxiv.org/pdf/2007.08426.pdf">Ribeiro et al. (2020)</a> proposed
+									a solution that took a different approach: they flattened to graphs to text and by doing this, transformed the graph-to-text task, to a text-to-text task.
+									This offers the benefit that they were then able to use pre-trained language models to initiate their model that generates text from graphs. 
 								</p>
-							<p>For future versions or continuation of this research, there are certain improvements that could be made.
-								First, if the intention of anonymizing a video is...</p>
-						<div class="features">
-							<section>
-								<span class="icon solid major fa-arrow-left"></span>
-								<h3>... known prior to its recording:</h3>
-								<p>Make use of a multi-camera or stereo camera setup, an RGBD (depth) camera,
-									or additional sensors, for a more straightforward
-									and reliable depth estimation.</p>
-								<p>If several cameras are available, 3D tracking (directly on the ground plane) could also be performed.</p>
-									<p></p>
-							</section>
-							<section>
-								<span class="icon solid major fa-arrow-right"></span>
-								<h3>... not known, or decided after its recording:</h3>
-								<p>Improve the depth estimation process, for instance by using a customized training dataset, with more and more varied
-									data (such as with different viewpoints and camera angles).</p>
-									<p>Make use of an alternative depth estimation method, that ideally also takes the time domain into account.</p>
-							</section>
-						</div>
-						<p>In addition, the object tracking algorithm that was used is an online technique, meaning that it only sees the previous
-						frames of the video and not future frames. Regardless of the prior knowledge (or lack thereof) of the intention to anonymize
-						a video,
-						the object tracking algorithm could be improved or substituted. As real-time execution is not needed in principle,
-						an online tracker could be used, with looks through all the frames
-						in the video from the beginning, for a more consistent object identification; or a tracker
-						based on the association of segmentation masks, instead of the detection boxes, further exploiting the features of the
-						Mask R-CNN detector.</p>
-						</div>
-					</section>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <a class="image"><img src="images/hand.jpg" alt="" data-position="top center"/></a>
+                        <div class="content">
+                            <div class="inner">
+                                <h3>How can we pose questions from graphs?</h3>
+                                <p> Some research has been conducted to specifically generate questions from graphs, that ask for information that is contained within the graph. 
+									<a href="https://arxiv.org/pdf/2004.06015.pdf">Chen et al. (2020)</a> used a dataset containing small graphs and questions, to train a model that can generate question, however their model architecture was quite complex, which sometimes resulted in unnatural questions. 
 
-					<!-- Four -->
-						<section id="four" class="wrapper style3 fade-up">
-							<div class="inner">
-								<h2>In the media</h2>
-								<p>Our project has been featured in the following conferences and events:</p>
+
+								</p>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- <section>
+                    							<a class="image"><img src="images/privacy_techniques.jpg" alt="" data-position="25% 25%" /></a>
+                    							<div class="content">
+                    								<div class="inner">
+                    									<h3>How can we remove or process personal data in a video?</h3>
+                    									<p>There are several existing methods for processing sensitive areas in images and videos. The most typical approach is to apply image filters, such as
+                    									<a href="https://ieeexplore.ieee.org/document/7026221/" target="_blank">blurring (a), pixelating (b), warping (c)</a>, <a
+                    									href="https://doi.org/10.1007/978-1-84882-301-3_8" target="_blank">morphing (d)</a>
+                    									 or <a href="https://ieeexplore.ieee.org/document/6343472" target="_blank">masking (e)</a>, for processing specific regions
+                    									 like human faces or license plates.
+                    									As these are not the only areas displaying personal data, image filters could be applied to larger areas, such as the whole human body.
+                    									We as humans, however, are capable of recognizing individuals even through these filters.</p>
+                    									<p>Other approaches also involve some disadvantages for our specific use case. <a href="https://doi.org/10.1117/12.587986" target="_blank">Object removal (f)</a> would prevent us from preserving relevant information;
+                    									and the <a href="https://doi.org/10.1109/CVPRW.2006.184" target="_blank">encryption of image regions (g)</a>, by means of pixels scrambling, can be reversed by using the corresponding key,
+                    									meaning that GDPR would still apply.</p>
+                    									<p>All these techniques have, in fact, something in common: they all manipulate the original video in some way. The problem of this approach is that,
+                    									if the intention is to automate the anonymization process, the detection of sensitive areas would have to be perfect. If the detection and
+                    									subsequent image processing failed for even just a single video frame, the privacy of the recorded individuals would be compromised.</p>
+                    
+                    								</div>
+                    							</div>
+                    						</section> -->
+                </section>
+
+            </section>
+
+
+            <!-- Two -->
+            <section id="method" class="wrapper style3 fade-up">
+                <div class="inner">
+                    <h2>Proposed method</h2>
+                    <p>For our approach, we decided to fine-tune pre-trained language models (PLMs) on graph-question datasets. PLMs are models that take an text input, and generate some other text based on this input. To do this, they are trained on enourmous corpora of text, from which they learned to produce very naturall language, and also information about what words mean and how words to each other relate.
+					</p>
+					<p>We hypothesized, that we can achieve good performance on the task of generating questions from graphs by fine-tuning PLMs on graph-question datasets, because 1. they can already produce good natural sounding language, and 2. through the training on so much text they have learning how different components of the graph relate to each other, enabling them to understand the graph structure and form good questions.</p>
+
+                    <div class="box alt">
+                        <div class="row gtr-uniform">
+                            <div class="col-12">
+                                <span class="image fit"><img src="images/method.png" alt="High-level functioning of the method"/></span>
+                            </div>
+                        </div>
+                    </div>
+                    <p>To achieve this, we use the following procedure:</p>
+                    <div class="features">
+                        <section>
+                            <span class="icon solid major fa-network-wired"></span>
+                            <h3>Linearize graphs</h3>
+                            <p> PLMs need data in text-form as their input, so we 'linearize', or flatten the graphs, by writing them down as a list of triples. </p>
+                        </section>
+                        <section>
+                            <span class="icon solid major fa-dumbbell"></span>
+                            <h3>Fine-tune pre-trained language model on the data</h3>
+                            <p>We use a dataset containing small graphs and questions to 'fine-tune' the pre-trained language models. Fine-tuning means that the weights of the pre-trained model are taken as the starting point, and then we use another dataset to learn the new mapping, in this case the relations between the graphs and questions in the dataset.
+                            </p>
+                        </section>
+                        <section>
+                            <span class="icon solid major fa-search"></span>
+                            <h3>Evaluate model</h3>
+								Using automatic evaluation metrics as well as human evalution, i.e. a questionaire asking for the quality of the generated questions, the quality of the model's performance is judges.
+                        </section>
+                        <section>
+                            <span class="icon solid major fa-project-diagram"></span>
+                            <h3>Test trained model on large KG</h3>
+								We then test the model on a graph that are not from the (test)dataset, but a graph that looks more like a graph that you would see in a productional setting.
+
+                        </section>
+                    </div>
+                    <!-- <ul class="actions">
+                    								<li><a href="generic.html" class="button">Learn more</a></li>
+                    							</ul> -->
+                </div>
+            </section>
+
+            <!-- Results -->
+            <section id="two" class="wrapper style3 fade-up">
+                <div class="inner">
+                    <h2>Results</h2>
+                    <p>
+                        <span class="image right"><img src="images/gennedq.png" alt=""/></span><br>
+                        As can be seen in the image, after training the model is able to produce good questions based on a small input graph from the test set.
+					</p>
+
+
+                    <h3>Autometic metric results</h3>
+                    <p>
+                        <span class="image left"><img src="images/autom.png" alt=""/></span><br>
+                        
+						Judging the two PLMs that we used, T5 and BART, we see that on the autometic metrics they were outperformed by previous research.
+					</p><br><br>
+
+                    <h3>Human evaluation</h3>
+                    <p>
+                        <span class="image right">
+                            <img src="images/human.png" alt=""/>
+                        </span>
+						But, when we asked people to judge the predicted questions on how natural they were and on how relevent to the input graph they were, we found that our fine-tuned model (T5) outperformed the previous research.
+
+                    </p>
+
+                    <h3>Testing on productional KG</h3>
+                    <p>
+						To use our fine-tuned model on large graphs like the one below, we first had to split up the graph into smaller subgraphs, since our model was trained to only handle smaller graphs. This also allowed us to generate multiple questions for one large knowledge graph, which is useful since our goal was to produce a lot of training data for these graphs.
+			
+						<div class="box alt">
+							<div class="row gtr-uniform">
+								<div class="col-12">
+									<span class="image fit"><img src="images/graph.svg" width="80%" alt=""/></span>
+								</div>
 							</div>
-							<!-- One -->
-								<section id="one" class="wrapper style2 spotlights">
-									<section>
-										<a class="image"><img src="images/globalainight.jpg" alt="" data-position="center center" /></a>
-										<div class="content">
-											<div class="inner">
-												<h2>Global AI Night @ Microsoft NL</h2>
-												<p>The Global AI Night is a free evening event organized by 94 communities all over the world that
-													are passionate about artificial intelligence applied to real world cases.
-												</p>
-												<p>Our project was featured as one of the 4 sessions during the last Fall edition (05/09/19) in Amsterdam,
-													hosted by Microsoft Nederland.
-												</p>
-												<ul class="actions">
-													<li><a href="https://www.youtube.com/watch?v=PGXH1R3Pzd4"  target="_blank" class="button">Watch session</a></li><li><a href="https://global.ainights.com/bootcamp/a58d62ea-f95f-4dae-a66d-43790f681cfa" target="_blank" class="button">Learn more</a></li>
-												</ul>
-											</div>
-										</div>
-									</section>
-									<section>
-										<a class="image"><img src="images/iska.jpg" alt="" data-position="top center" /></a>
-										<div class="content">
-											<div class="inner">
-												<h2>IS Knowledge Night @ Info Support</h2>
-												<p>The Info Support Knowledge Nights are weekly events where Info Support colleages give
-													1-hour lectures on current developments with regard to IT products and technologies.</p>
-													<ul class="actions">
-														<li><a href="https://www.infosupport.com/info-support-techtalks/" target="_blank" class="button">Learn more</a></li>
-													</ul>
-											</div>
-										</div>
-									</section>
-									<section>
-										<a class="image"><img src="images/demoday.jpg" alt="" data-position="25% 25%" /></a>
-										<div class="content">
-											<div class="inner">
-												<h2>Research Demo Day @ Info Support</h2>
-												<p>The Info Support Research Demo Day is an open event where the Research Center of the company is introduced,
-													and insight is given on some of the most relevant research that has been conducted lately.</p>
-												<ul class="actions">
-													<li><a href="https://research.infosupport.com/demoday/" target="_blank" class="button">Learn more</a></li>
-												</ul>
-											</div>
-										</div>
-									</section>
-									<section>
-										<a class="image"><img src="images/paaspop_skyclub.jpg" alt="" data-position="25% 25%" /></a>
-										<div class="content">
-											<div class="inner">
-												<h2>Paaspop Business Event @ Paaspop Skyclub</h2>
-												<p>The Paaspop Skyclub is the business-to-business platform within the festival where different networking activities
-													and meetings take place, to facilitate inspiration and connections among local and national companies.</p>
-												<ul class="actions">
-													<li><a href="http://paaspopskyclub.nl/" target="_blank" class="button">Learn more</a></li>
-												</ul>
-											</div>
-										</div>
-									</section>
-								</section>
-						</section>
+						</div>
+						
+						As we can see in the image below, when the model was fed one of the extracted subgraphs, it had a bit more trouble coming up with a good question. This is likely because of the fact that these graphs are formulated in a much different way than its training graphs, where the graph edged contained much more specific information instead of meta types of relations like 'value' and 'yields'<br><br>
 
-			</div>
+						<div class="box alt">
+							<div class="row gtr-uniform">
+								<div class="col-12">
+									<span class="image fit"><img src="images/subgraph.png" width="80%" alt=""/></span>
+								</div>
+							</div>
+						</div>
+						
 
-		<!-- Footer -->
-			<footer id="footer" class="wrapper style1-alt">
-				<div class="inner">
-					<ul class="menu">
-						<li>&copy; Lucía Conde Moreno, Info Support B.V., Utrecht University.</li><li>Modified template from <a href="http://html5up.net" target="_blank">HTML5 UP</a></li>
-					</ul>
-				</div>
-			</footer>
+					</p>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
 
-	</body>
+                </div>
+            </section>
+
+            <!-- Three -->
+            <section id="three" class="wrapper style1 fade-up">
+                <div class="inner">
+                    <h2>Future work</h2>
+                    <p>
+						The model performed very well on the test dataset when evaluated for naturalness and relevancy, outperforming the previous state-of-the-art on the task.
+						However, when tested on a knowledge graph out of the domain of the training data, it had trouble generating good questions.
+						Future work can try to retrain the model, on graphs that are more representative for the productional graphs, to find if this will improve the performance on these kind of graphs.
+                    </p>
+                </div>
+            </section>
+        </div>
+
+        <!-- Footer -->
+        <footer id="footer" class="wrapper style1-alt">
+            <div class="inner">
+                <ul class="menu">
+                    <li>&copy; Stan Lochtenberg, Info Support B.V., Universiteit van Amsterdam.</li>
+                    <li>Modified template from
+                        <a href="http://html5up.net" target="_blank">HTML5 UP</a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+
+        <!-- Scripts -->
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/jquery.scrollex.min.js"></script>
+        <script src="assets/js/jquery.scrolly.min.js"></script>
+        <script src="assets/js/browser.min.js"></script>
+        <script src="assets/js/breakpoints.min.js"></script>
+        <script src="assets/js/util.js"></script>
+        <script src="assets/js/main.js"></script>
+
+    </body>
 </html>
